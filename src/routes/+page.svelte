@@ -99,82 +99,69 @@
 	<meta name="description" content="Portfólio - Matheus Chignolli" />
 </svelte:head>
 
-<div class="content">
-	<section>
-		<h1>
-			Olá! <br />
-			Sou <b>Matheus Chignolli</b> <br />
-			<b>Desenvolvedor Front-end</b>
-		</h1>
-		<p>
-			Gosto de resolver problemas, enfrentar desafios e poder colaborar com o conhecimento que
-			tenho, além de aprender e conhecer muitas coisas que ainda não tive contato 👀
-		</p>
-		{#if !!technologies?.length}
-			<h2>Tecnologias</h2>
-			<ul>
-				{#each technologies as { principal, libs }}
-					{#if libs?.length}
-						<li>
-							<b>{principal + (libs?.length ? ': ' : '')}</b>
-							{#if libs?.length && typeof libs[0] === 'string'}
-								{#each libs as lib, libIndex}
-									{(libIndex !== 0 ? ', ' : '') + lib}
-								{/each}
-							{:else}
-								<ul>
-									{#each libs as lib}
-										{#if typeof lib !== 'string'}
-											<li>
-												<b>{lib.info + (lib.list?.length ? ': ' : '')}</b>
-												{#if !!lib.list?.length}
-													{#each lib.list as item, itemIndex}
-														{(itemIndex !== 0 ? ', ' : '') + item}
-													{/each}
-												{/if}
-											</li>
-										{/if}
-									{/each}
-								</ul>
-							{/if}
-						</li>
-					{/if}
-				{/each}
-			</ul>
-		{/if}
-	</section>
-	{#if !!contacts.length}
-		<aside>
-			<h2>Contato</h2>
-			<ul>
-				{#each contacts as { url, info, title }}
+<section>
+	<h1>
+		Olá! <br />
+		Sou <b>Matheus Chignolli</b> <br />
+		<b>Desenvolvedor Front-end</b>
+	</h1>
+	<p>
+		Gosto de resolver problemas, enfrentar desafios e poder colaborar com o conhecimento que tenho,
+		além de aprender e conhecer muitas coisas que ainda não tive contato.
+	</p>
+	<ul class="contacts-list">
+		{#each contacts as { url, info, title }}
+			<li>
+				<b>{title}:</b>
+				{#if url.includes('http') || url.includes('mailto')}
+					<a target="_blank" rel="noreferrer" href={url}>{info}</a>
+				{:else}
+					<a target="_blank" rel="noreferrer" href={url}>
+						<button>{info}</button>
+					</a>
+				{/if}
+			</li>
+		{/each}
+	</ul>
+	{#if !!technologies?.length}
+		<h2>Tecnologias</h2>
+		<ul class="technologies-list">
+			{#each technologies as { principal, libs }}
+				{#if libs?.length}
 					<li>
-						<b>{title}:</b> <br />
-						{info} <br />
-						{#if url.includes('http') || url.includes('mailto')}
-							<a target="_blank" rel="noreferrer" href={url}> Acessar </a>
+						<b>{principal + (libs?.length ? ': ' : '')}</b>
+						{#if libs?.length && typeof libs[0] === 'string'}
+							{#each libs as lib, libIndex}
+								{(libIndex !== 0 ? ', ' : '') + lib}
+							{/each}
 						{:else}
-							<a target="_blank" rel="noreferrer" href={url}>
-								<button>Acessar</button>
-							</a>
+							<ul>
+								{#each libs as lib}
+									{#if typeof lib !== 'string'}
+										<li>
+											<b>{lib.info + (lib.list?.length ? ': ' : '')}</b>
+											{#if !!lib.list?.length}
+												{#each lib.list as item, itemIndex}
+													{(itemIndex !== 0 ? ', ' : '') + item}
+												{/each}
+											{/if}
+										</li>
+									{/if}
+								{/each}
+							</ul>
 						{/if}
 					</li>
-				{/each}
-			</ul>
-		</aside>
+				{:else}
+					<li><b>{principal}</b></li>
+				{/if}
+			{/each}
+		</ul>
 	{/if}
-</div>
+</section>
 
 <style>
-	.content {
-		display: flex;
-		flex-direction: row;
-		align-items: flex-start;
-	}
-
 	section {
 		padding: 0px;
-		width: 70%;
 		color: var(--color-text);
 	}
 
@@ -184,14 +171,23 @@
 		list-style-type: none;
 	}
 
-	section ul b {
-		color: var(--color-theme-1);
+	section ul.contacts-list {
+		margin: 0;
+		padding: 0;
 	}
 
-	section > ul {
+	section ul.contacts-list a {
+		color: var(--color-theme-2);
+	}
+
+	section ul.technologies-list {
 		padding: 18px;
 		border-radius: 4px;
 		border: 2px solid var(--color-theme-2);
+	}
+
+	section ul.technologies-list b {
+		color: var(--color-theme-1);
 	}
 
 	section > ul ul {
@@ -218,48 +214,12 @@
 	}
 
 	section h2 {
-		margin: 12px 0;
+		font-size: 1.5rem;
+		margin: 48px 0 12px 0;
 		color: var(--color-theme-1);
 	}
 
-	aside {
-		width: 30%;
-	}
-
-	aside h2 {
-		margin: 12px 0;
-		color: var(--color-theme-2);
-	}
-
-	aside ul {
-		border-radius: 4px;
-		padding: 18px;
-		margin: 0;
-		list-style: none;
-		border: 2px solid var(--color-theme-1);
-	}
-
-	aside ul li:not(:first-child) {
-		margin-top: 12px;
-	}
-
-	aside ul b {
-		color: var(--color-theme-2);
-	}
-
-	aside ul li a {
-		padding: 8px;
-		border-radius: 4px;
-		display: inline-block;
-		color: var(--color-text);
-		background-color: var(--color-theme-2);
-	}
-
 	@media (max-width: 1200px) {
-		.content {
-			flex-direction: column;
-		}
-
 		section {
 			width: 100%;
 		}
@@ -270,10 +230,6 @@
 
 		section p {
 			max-width: 100%;
-		}
-
-		aside {
-			width: 100%;
 		}
 	}
 </style>
