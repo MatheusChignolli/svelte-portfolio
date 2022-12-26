@@ -1,5 +1,6 @@
 <script>
 	import Header from './Header.svelte';
+	import Footer from './Footer.svelte';
 	import './styles.css';
 </script>
 
@@ -8,10 +9,7 @@
 		<Header />
 		<slot />
 	</main>
-
-	<footer>
-		<p>Copyright {new Date().getFullYear()}</p>
-	</footer>
+	<Footer />
 </div>
 
 <style>
@@ -26,7 +24,7 @@
 		flex-direction: column;
 		box-sizing: border-box;
 		height: 100%;
-		padding: 0 96px 96px 96px;
+		padding: 0 96px 48px 96px;
 		margin: 0 auto;
 		max-width: 1440px;
 	}
@@ -34,20 +32,6 @@
 	@media (max-width: 1200px) {
 		main {
 			padding: 0 24px 24px 24px;
-		}
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
 		}
 	}
 </style>

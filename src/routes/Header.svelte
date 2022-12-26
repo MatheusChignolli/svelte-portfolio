@@ -15,8 +15,8 @@
 	];
 </script>
 
-<header>
-	{#if !!links?.length}
+{#if !!links?.length}
+	<header>
 		<nav>
 			<ul>
 				{#each links as { title, url }}
@@ -32,8 +32,8 @@
 				{/each}
 			</ul>
 		</nav>
-	{/if}
-</header>
+	</header>
+{/if}
 
 <style>
 	header {

@@ -1,22 +1,4 @@
 <script lang="ts">
-	export const contacts = [
-		{
-			title: 'Github',
-			info: 'MatheusChignolli',
-			url: 'https://github.com/MatheusChignolli'
-		},
-		{
-			title: 'E-mail',
-			info: 'matheuschignolli@gmail.com',
-			url: 'mailto:matheuschignolli@gmail.com'
-		},
-		{
-			title: 'LinkedIn',
-			info: 'matheus-chignolli-a0115b155',
-			url: 'https://www.linkedin.com/in/matheus-chignolli-a0115b155/'
-		}
-	] as const;
-
 	export const technologies: {
 		principal: string;
 		libs?: ({ info: string; list?: string[] } | string)[];
@@ -51,6 +33,10 @@
 					list: ['Jest', 'React testing library', 'Cypress']
 				}
 			]
+		},
+		{
+			principal: 'Versionamento',
+			libs: ['Git', 'Github', 'Bitbucket', 'Gitlab']
 		},
 		{
 			principal: 'Banco de Dados',
@@ -101,28 +87,13 @@
 
 <section>
 	<h1>
-		Olá! <br />
-		Sou <b>Matheus Chignolli</b> <br />
+		<b>Matheus Chignolli</b> <br />
 		<b>Desenvolvedor Front-end</b>
 	</h1>
 	<p>
 		Gosto de resolver problemas, enfrentar desafios e poder colaborar com o conhecimento que tenho,
 		além de aprender e conhecer muitas coisas que ainda não tive contato.
 	</p>
-	<ul class="contacts-list">
-		{#each contacts as { url, info, title }}
-			<li>
-				<b>{title}:</b>
-				{#if url.includes('http') || url.includes('mailto')}
-					<a target="_blank" rel="noreferrer" href={url}>{info}</a>
-				{:else}
-					<a target="_blank" rel="noreferrer" href={url}>
-						<button>{info}</button>
-					</a>
-				{/if}
-			</li>
-		{/each}
-	</ul>
 	{#if !!technologies?.length}
 		<h2>Tecnologias</h2>
 		<ul class="technologies-list">
@@ -171,18 +142,10 @@
 		list-style-type: none;
 	}
 
-	section ul.contacts-list {
-		margin: 0;
-		padding: 0;
-	}
-
-	section ul.contacts-list a {
-		color: var(--color-theme-2);
-	}
-
 	section ul.technologies-list {
 		padding: 18px;
 		border-radius: 4px;
+		width: fit-content;
 		border: 2px solid var(--color-theme-2);
 	}
 
@@ -198,11 +161,6 @@
 		font-size: 18px;
 		max-width: 50%;
 		text-align: justify;
-	}
-
-	section h1 {
-		font-size: 48px;
-		margin: 0;
 	}
 
 	section h1 b:nth-of-type(1) {
@@ -225,7 +183,7 @@
 		}
 
 		section h1 {
-			font-size: 24px;
+			font-size: 1.5rem;
 		}
 
 		section p {
