@@ -1,5 +1,5 @@
 <script lang="ts">
-	import FirstContent from '../components/FirstContent.svelte';
+	import About from '../components/About.svelte';
 	import SecondContent from '../components/SecondContent.svelte';
 </script>
 
@@ -9,7 +9,7 @@
 </svelte:head>
 
 <section>
-	<FirstContent />
+	<About />
 	<SecondContent />
 </section>
 

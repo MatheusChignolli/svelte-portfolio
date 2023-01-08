@@ -2,7 +2,7 @@
 	import profileImage from '$lib/images/profile.png';
 </script>
 
-<div class="first-content">
+<section id="about">
 	<div>
 		<h1>
 			<b>Desenvolvedor Front-end</b>
@@ -59,94 +59,56 @@
 	<div class="profile-image">
 		<img src={profileImage} alt="Foto de perfil" />
 	</div>
-</div>
+</section>
 
 <style>
-	.first-content h1 {
-		width: fit-content;
-		position: relative;
-		font-size: 3rem;
-		margin-bottom: 48px;
-	}
-
-	.first-content h1::before {
-		left: -20px;
-		width: 300px;
-		height: 200px;
-		bottom: -20px;
-		content: '';
-		z-index: -1;
-		position: absolute;
-		border-radius: 8px;
-		background-color: var(--color-primary-main);
-	}
-
-	.first-content h1::after {
-		left: 200px;
-		width: calc(100% - 170px);
-		height: 100px;
-		bottom: 0;
-		content: '';
-		z-index: -1;
-		position: absolute;
-		border-radius: 8px;
-		background-color: var(--color-primary-dark);
-	}
-
-	.first-content {
-		color: var(--color-primary-text);
+	section#about {
 		height: calc(100vh - 43px);
 		display: flex;
 		align-items: center;
 	}
 
-	.first-content .profile-image,
-	.first-content .profile-image img {
-		max-width: 450px;
-		max-height: 450px;
-		border-radius: 8px;
-	}
-
-	.first-content .profile-image {
+	section#about h1 {
+		width: fit-content;
 		position: relative;
-		margin-right: 75px;
+		margin-bottom: 48px;
 	}
 
-	.first-content .profile-image::before,
-	.first-content .profile-image::after {
-		width: 100%;
-		height: 100%;
+	section#about h1::before,
+	section#about h1::after {
 		content: '';
 		z-index: -1;
 		position: absolute;
 		border-radius: 8px;
 	}
 
-	.first-content .profile-image::before {
-		top: -75px;
-		left: -75px;
+	section#about h1::before {
+		left: -5%;
+		width: 50%;
+		height: 300%;
+		bottom: -30%;
 		background-color: var(--color-primary-dark);
 	}
 
-	.first-content .profile-image::after {
-		top: 75px;
-		left: 75px;
-		z-index: -2;
+	section#about h1::after {
+		left: 40%;
+		width: 70%;
+		bottom: 40%;
+		height: 130%;
 		background-color: var(--color-primary-main);
 	}
-	.first-content p {
-		font-size: 1.25rem;
+
+	section#about p {
 		max-width: 75%;
-		text-align: justify;
 	}
 
-	.first-content .contacts {
+	section#about .contacts {
 		gap: 16px;
 		display: flex;
 		margin-top: 24px;
 	}
 
-	.first-content .contacts a {
+	section#about .contacts a {
 		color: var(--color-primary-text);
 		width: 28px;
 		height: 28px;
@@ -159,9 +121,75 @@
 		background-color: var(--color-primary-main);
 	}
 
-	.first-content .contacts a:hover {
+	section#about .contacts a:hover {
 		transition: 0.5s;
 		color: var(--color-primary-light);
 		background-color: var(--color-primary-dark);
+	}
+
+	section#about .profile-image,
+	section#about .profile-image img {
+		position: relative;
+		max-width: 450px;
+		max-height: 450px;
+		border-radius: 8px;
+	}
+
+	section#about .profile-image::before,
+	section#about .profile-image::after {
+		width: 100%;
+		height: 100%;
+		content: '';
+		z-index: -1;
+		position: absolute;
+		border-radius: 8px;
+	}
+
+	section#about .profile-image::before {
+		right: 15%;
+		bottom: 15%;
+		background-color: var(--color-primary-dark);
+	}
+
+	section#about .profile-image::after {
+		top: 15%;
+		left: 15%;
+		background-color: var(--color-primary-main);
+	}
+
+	@media (max-width: 1500px) {
+		section#about .profile-image img {
+			width: 300px;
+			height: 300px;
+		}
+	}
+
+	@media (max-width: 1200px) {
+		section#about h1 {
+			margin: 70px 20px 30px 20px;
+		}
+
+		section#about {
+			flex-direction: column;
+		}
+
+		section#about p {
+			max-width: 100%;
+		}
+
+		section#about .profile-image {
+			margin: 20% 0 0 0;
+		}
+	}
+
+	@media (max-width: 640px) {
+		section#about h1 {
+			margin: 40px 20px 30px 20px;
+		}
+
+		section#about .profile-image img {
+			width: 200px;
+			height: 200px;
+		}
 	}
 </style>
