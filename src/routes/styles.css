@@ -22,6 +22,11 @@ h1 {
 	font-size: 3rem;
 }
 
+h2 {
+	width: fit-content;
+	font-size: 2.75rem;
+}
+
 p {
 	font-size: 1.25rem;
 	text-align: justify;
@@ -59,12 +64,32 @@ button:focus:not(:focus-visible) {
 	outline: none;
 }
 
+ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+ul ul {
+	padding-left: 18px;
+	list-style-type: '→ ';
+}
+
+li {
+	padding: 4px 0;
+	font-size: 1.25rem;
+}
+
 @media (max-width: 1360px) {
 	h1 {
-		font-size: 2rem;
+		font-size: 2.5rem;
 	}
 
-	p {
+	h2 {
+		font-size: 2.5rem;
+	}
+
+	p,
+	li {
 		font-size: 1rem;
 	}
 }
@@ -73,6 +98,10 @@ button:focus:not(:focus-visible) {
 	h1 {
 		font-size: 2rem;
 	}
+
+	h2 {
+		font-size: 2.25rem;
+	}
 }
 
 @media (max-width: 640px) {
@@ -80,7 +109,12 @@ button:focus:not(:focus-visible) {
 		font-size: 1.25rem;
 	}
 
-	p {
+	h2 {
+		font-size: 1.25rem;
+	}
+
+	p,
+	li {
 		font-size: 0.875rem;
 	}
 }

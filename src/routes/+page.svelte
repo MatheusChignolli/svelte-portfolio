@@ -1,6 +1,6 @@
 <script lang="ts">
 	import About from '../components/About.svelte';
-	import SecondContent from '../components/SecondContent.svelte';
+	import Technologies from '../components/Technologies.svelte';
 </script>
 
 <svelte:head>
@@ -10,7 +10,7 @@
 
 <section>
 	<About />
-	<SecondContent />
+	<Technologies />
 </section>
 
 <style>

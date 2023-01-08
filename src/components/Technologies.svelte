@@ -94,18 +94,16 @@
 
 <style>
 	h2 {
-		width: fit-content;
 		position: relative;
-		font-size: 3rem;
 		margin-bottom: 96px;
-		color: var(--color-primary-text);
+		margin: 24px 0 120px 0;
 	}
 
 	h2::before {
-		right: -20px;
-		width: 130px;
-		height: 150px;
-		top: -10px;
+		top: -15%;
+		right: -10%;
+		width: 60%;
+		height: 250%;
 		content: '';
 		z-index: -1;
 		position: absolute;
@@ -114,10 +112,10 @@
 	}
 
 	h2::after {
-		left: -20px;
-		width: calc(100% - 60px);
-		height: 70px;
-		top: 30px;
+		top: 60%;
+		left: -10%;
+		width: 80%;
+		height: 120%;
 		content: '';
 		z-index: -1;
 		position: absolute;
@@ -125,25 +123,10 @@
 		background-color: var(--color-primary-dark);
 	}
 
-	ul {
-		color: var(--color-primary-text);
-		margin: 0;
-		padding-left: 20px;
-		border-radius: 8px;
-		list-style-type: none;
-	}
-
-	ul.technologies-list {
-		width: fit-content;
-		padding: 18px;
-	}
-
-	ul.technologies-list li {
-		padding: 4px 0;
-		font-size: 1.2rem;
-	}
-
-	section > ul ul {
-		list-style-type: '→ ';
+	@media (max-width: 1200px) {
+		h2 {
+			margin: 24px auto 120px auto;
+			font-size: 2rem;
+		}
 	}
 </style>

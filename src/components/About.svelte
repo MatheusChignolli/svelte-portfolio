@@ -4,9 +4,7 @@
 
 <section id="about">
 	<div>
-		<h1>
-			<b>Desenvolvedor Front-end</b>
-		</h1>
+		<h1>Desenvolvedor Front-end</h1>
 		<p>
 			Me chamo <b>Matheus Chignolli</b>, gosto de resolver problemas, enfrentar desafios e poder colaborar com o
 			conhecimento que tenho, além de aprender e conhecer muitas coisas que ainda não tive contato. Sempre fui muito
@@ -93,7 +91,7 @@
 	section#about h1::after {
 		left: 40%;
 		width: 70%;
-		bottom: 40%;
+		bottom: 50%;
 		height: 130%;
 		background-color: var(--color-primary-main);
 	}
@@ -165,6 +163,11 @@
 	}
 
 	@media (max-width: 1200px) {
+		section#about {
+			height: 100%;
+			margin-bottom: 120px;
+		}
+
 		section#about h1 {
 			margin: 70px 20px 30px 20px;
 		}
