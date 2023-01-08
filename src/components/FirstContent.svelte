@@ -1,0 +1,167 @@
+<script>
+	import profileImage from '$lib/images/profile.png';
+</script>
+
+<div class="first-content">
+	<div>
+		<h1>
+			<b>Desenvolvedor Front-end</b>
+		</h1>
+		<p>
+			Me chamo <b>Matheus Chignolli</b>, gosto de resolver problemas, enfrentar desafios e poder colaborar com o
+			conhecimento que tenho, além de aprender e conhecer muitas coisas que ainda não tive contato. Sempre fui muito
+			ligado a tecnologia e tudo de bom que ela pode oferecer, hoje uso dessa paixão para desenvolver e solucionar
+			problemas reais do mundo com a tecnologia.
+		</p>
+		<div class="contacts">
+			<a href="https://github.com/MatheusChignolli" aria-label="Github" target="_blank" rel="noreferrer">
+				<svg
+					viewBox="0 0 24 24"
+					aria-hidden="true"
+					focusable="false"
+					fill="currentColor"
+					xmlns="http://www.w3.org/2000/svg"
+					class="StyledIconBase-ea9ulj-0 bWRyML"
+					><path
+						d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+					/>
+				</svg>
+			</a>
+			<a
+				href="https://www.linkedin.com/in/matheus-chignolli-a0115b155/"
+				aria-label="Linkedin"
+				target="_blank"
+				rel="noreferrer"
+			>
+				<svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+					><path
+						d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+					/>
+				</svg>
+			</a>
+			<a href="mailto:matheuschignolli@gmail.com" aria-label="E-mail" target="_blank" rel="noreferrer">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 1000 1000">
+					<g
+						><path
+							d="M612,591.7C556.7,636,522.2,658,487.8,658c-33,0-66.4-20.6-118-60.8L62.7,867.5h864.9L615.5,589.1C614.3,589.9,613,591,612,591.7z"
+						/><path
+							d="M247.7,502.7C174.8,446.5,90.7,381.5,10,317.6v509.5c0,1.6,0.8,3,0.9,4.5l309.6-272.5C298.1,541.6,274,523.1,247.7,502.7z"
+						/><path
+							d="M987.6,838.9c1.2-3.7,2.4-7.6,2.4-11.8V296c-96.9,75.4-237.2,184.6-325.8,254.5L987.6,838.9z"
+						/><path
+							d="M928.8,132.5H71.3c-22.4,0-61.3,38.9-61.3,61.3V242c90.3,71.9,188.4,147.6,271.5,211.7c45.8,35.4,86.9,67.2,119.3,92.5c87.4,68.5,87.4,68.5,176.6-2.8C658.1,479,875.2,310.1,990,220.8v-26.9C990,171.4,951.1,132.5,928.8,132.5z"
+						/>
+					</g>
+				</svg>
+			</a>
+		</div>
+	</div>
+	<div class="profile-image">
+		<img src={profileImage} alt="Foto de perfil" />
+	</div>
+</div>
+
+<style>
+	.first-content h1 {
+		width: fit-content;
+		position: relative;
+		font-size: 3rem;
+		margin-bottom: 48px;
+	}
+
+	.first-content h1::before {
+		left: -20px;
+		width: 300px;
+		height: 200px;
+		bottom: -20px;
+		content: '';
+		z-index: -1;
+		position: absolute;
+		border-radius: 8px;
+		background-color: var(--color-primary-main);
+	}
+
+	.first-content h1::after {
+		left: 200px;
+		width: calc(100% - 170px);
+		height: 100px;
+		bottom: 0;
+		content: '';
+		z-index: -1;
+		position: absolute;
+		border-radius: 8px;
+		background-color: var(--color-primary-dark);
+	}
+
+	.first-content {
+		color: var(--color-primary-text);
+		height: calc(100vh - 43px);
+		display: flex;
+		align-items: center;
+	}
+
+	.first-content .profile-image,
+	.first-content .profile-image img {
+		max-width: 450px;
+		max-height: 450px;
+		border-radius: 8px;
+	}
+
+	.first-content .profile-image {
+		position: relative;
+		margin-right: 75px;
+	}
+
+	.first-content .profile-image::before,
+	.first-content .profile-image::after {
+		width: 100%;
+		height: 100%;
+		content: '';
+		z-index: -1;
+		position: absolute;
+		border-radius: 8px;
+	}
+
+	.first-content .profile-image::before {
+		top: -75px;
+		left: -75px;
+		background-color: var(--color-primary-dark);
+	}
+
+	.first-content .profile-image::after {
+		top: 75px;
+		left: 75px;
+		z-index: -2;
+		background-color: var(--color-primary-main);
+	}
+	.first-content p {
+		font-size: 1.25rem;
+		max-width: 75%;
+		text-align: justify;
+	}
+
+	.first-content .contacts {
+		gap: 16px;
+		display: flex;
+		margin-top: 24px;
+	}
+
+	.first-content .contacts a {
+		color: var(--color-primary-text);
+		width: 28px;
+		height: 28px;
+		display: flex;
+		padding: 8px;
+		transition: 0.5s;
+		align-items: center;
+		border-radius: 8px;
+		justify-content: center;
+		background-color: var(--color-primary-main);
+	}
+
+	.first-content .contacts a:hover {
+		transition: 0.5s;
+		color: var(--color-primary-light);
+		background-color: var(--color-primary-dark);
+	}
+</style>

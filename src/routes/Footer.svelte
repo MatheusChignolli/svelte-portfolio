@@ -68,12 +68,14 @@
 
 <style>
 	footer {
-		padding: 12px;
+		color: var(--color-primary-text);
 		display: flex;
+		padding: 12px 96px;
+		max-width: var(--page-max-width);
 		margin-top: auto;
 		align-items: center;
-		justify-content: space-around;
-		background-color: var(--color-theme-2);
+		justify-content: space-between;
+		background-color: var(--color-primary-main);
 	}
 
 	footer svg {
@@ -82,16 +84,22 @@
 	}
 
 	footer ul {
+		gap: 16px;
 		margin: 0;
 		padding: 0;
-		list-style: none;
 		display: flex;
-		gap: 16px;
+		list-style: none;
 	}
 
-	@media (min-width: 480px) {
+	footer ul a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	@media (max-width: 1200px) {
 		footer {
-			padding: 12px 0;
+			padding: 12px 24px;
 		}
 	}
 </style>

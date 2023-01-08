@@ -15,8 +15,9 @@
 	];
 </script>
 
-{#if !!links?.length}
-	<header>
+<header>
+	<h5>Matheus Chignolli</h5>
+	{#if !!links?.length}
 		<nav>
 			<ul>
 				{#each links as { title, url }}
@@ -32,25 +33,32 @@
 				{/each}
 			</ul>
 		</nav>
-	</header>
-{/if}
+	{/if}
+</header>
 
 <style>
 	header {
 		display: flex;
-		flex-direction: row;
-		justify-content: end;
+		padding: 12px 96px;
+		max-width: var(--page-max-width);
 		align-items: center;
-		padding: 48px 0px 32px;
+		margin-bottom: 24px;
+		flex-direction: row;
+		justify-content: space-between;
+		background-color: var(--color-primary-main);
+	}
+
+	header h5 {
+		font-size: 1rem;
 	}
 
 	header ul {
-		list-style: none;
-		display: flex;
-		flex-direction: row;
+		gap: 32px;
 		margin: 0;
 		padding: 0;
-		gap: 32px;
+		display: flex;
+		list-style: none;
+		flex-direction: row;
 	}
 
 	header ul li {
@@ -59,5 +67,11 @@
 
 	header ul li a {
 		color: var(--color-text);
+	}
+
+	@media (max-width: 1200px) {
+		header {
+			padding: 12px 24px;
+		}
 	}
 </style>

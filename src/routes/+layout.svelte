@@ -5,8 +5,8 @@
 </script>
 
 <div class="app">
+	<Header />
 	<main>
-		<Header />
 		<slot />
 	</main>
 	<Footer />
@@ -20,13 +20,13 @@
 	}
 
 	main {
-		display: flex;
-		flex-direction: column;
-		box-sizing: border-box;
 		height: 100%;
-		padding: 0 96px 48px 96px;
 		margin: 0 auto;
-		max-width: 1440px;
+		display: flex;
+		padding: 0 96px 48px 96px;
+		max-width: var(--page-max-width);
+		box-sizing: border-box;
+		flex-direction: column;
 	}
 
 	@media (max-width: 1200px) {
