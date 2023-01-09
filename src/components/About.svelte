@@ -155,6 +155,12 @@
 		background-color: var(--color-primary-main);
 	}
 
+	@media (min-width: 1500px) {
+		section#about .profile-image {
+			margin-right: 80px;
+		}
+	}
+
 	@media (max-width: 1500px) {
 		section#about .profile-image img {
 			width: 300px;

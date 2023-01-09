@@ -1,20 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
+body.dark-mode {
+	--color-primary-background: #565656;
+	--color-primary-main: #393939;
+	--color-primary-light: #888888;
+	--color-primary-dark: #212121;
+	--color-primary-text: #f2f2f2;
+}
+
 :root {
-	--font-body: 'Montserrat', monospace;
-	--color-primary-main: #ebebeb;
-	--color-primary-light: #ffffff;
-	--color-primary-dark: #bebebe;
+	--color-primary-background: #f2f2f2;
+	--color-primary-main: #dbdbdb;
+	--color-primary-light: #ececec;
+	--color-primary-dark: #a9a9a9;
 	--color-primary-text: #333333;
-	--page-max-width: 1820px;
-	font-family: var(--font-body);
-	color: var(--color-primary-text);
 }
 
 body {
+	color: var(--color-primary-text);
 	margin: 0;
 	min-height: 100vh;
-	background-color: var(--color-theme-0);
+	font-family: var(--font-body);
+	background-color: var(--color-primary-background);
 }
 
 h1 {
@@ -56,8 +63,13 @@ a:hover {
 
 input,
 button {
+	border: none;
 	font-size: inherit;
 	font-family: inherit;
+}
+
+button:hover {
+	cursor: pointer;
 }
 
 button:focus:not(:focus-visible) {
@@ -70,7 +82,7 @@ ul {
 }
 
 ul ul {
-	padding-left: 18px;
+	padding-left: 20px;
 	list-style-type: '→ ';
 }
 

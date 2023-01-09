@@ -58,7 +58,7 @@
 </script>
 
 {#if !!technologies?.length}
-	<h2>Tecnologias</h2>
+	<h2 id="technologies">Tecnologias</h2>
 	<ul class="technologies-list">
 		{#each technologies as { principal, libs }}
 			{#if libs?.length}

@@ -1,17 +1,11 @@
 <script lang="ts">
+	import ThemeButton from '../components/ThemeButton.svelte';
+
 	const links: { title: string; url: string }[] = [
-		// {
-		// 	title: 'Projetos',
-		// 	url: '/projetos'
-		// },
-		// {
-		// 	title: 'Contato',
-		// 	url: 'https://google.com'
-		// },
-		// {
-		// 	title: 'Github',
-		// 	url: 'https://github.com'
-		// }
+		{
+			title: 'Tecnologias',
+			url: '#technologies'
+		}
 	];
 </script>
 
@@ -34,6 +28,7 @@
 			</ul>
 		</nav>
 	{/if}
+	<ThemeButton />
 </header>
 
 <style>
@@ -62,11 +57,7 @@
 	}
 
 	header ul li {
-		font-size: 18px;
-	}
-
-	header ul li a {
-		color: var(--color-text);
+		font-size: 1rem;
 	}
 
 	@media (max-width: 1200px) {
