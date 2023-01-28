@@ -23,15 +23,9 @@
 		height: 100%;
 		margin: 0 auto;
 		display: flex;
-		padding: 0 96px 48px 96px;
+		padding: 24px;
 		max-width: var(--page-max-width);
 		box-sizing: border-box;
 		flex-direction: column;
-	}
-
-	@media (max-width: 1200px) {
-		main {
-			padding: 0 24px 24px 24px;
-		}
 	}
 </style>

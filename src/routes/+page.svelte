@@ -8,10 +8,8 @@
 	<meta name="description" content="Portfólio - Matheus Chignolli" />
 </svelte:head>
 
-<section>
-	<About />
-	<Technologies />
-</section>
+<About />
+<Technologies />
 
 <style>
 </style>

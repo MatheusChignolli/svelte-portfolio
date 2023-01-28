@@ -58,6 +58,7 @@
 </script>
 
 {#if !!technologies?.length}
+	<hr />
 	<h2 id="technologies">Tecnologias</h2>
 	<ul class="technologies-list">
 		{#each technologies as { principal, libs }}
@@ -93,40 +94,9 @@
 {/if}
 
 <style>
-	h2 {
-		position: relative;
-		margin-bottom: 96px;
-		margin: 24px 0 120px 0;
-	}
-
-	h2::before {
-		top: -15%;
-		right: -10%;
-		width: 60%;
-		height: 250%;
-		content: '';
-		z-index: -1;
-		position: absolute;
-		border-radius: 8px;
-		background-color: var(--color-primary-main);
-	}
-
-	h2::after {
-		top: 60%;
-		left: -10%;
-		width: 80%;
-		height: 120%;
-		content: '';
-		z-index: -1;
-		position: absolute;
-		border-radius: 8px;
-		background-color: var(--color-primary-dark);
-	}
-
-	@media (max-width: 1200px) {
-		h2 {
-			margin: 24px auto 120px auto;
-			font-size: 2rem;
-		}
+	hr {
+		margin: 24px 0;
+		width: 100%;
+		border-color: var(--color-primary-text);
 	}
 </style>

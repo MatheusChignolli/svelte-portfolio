@@ -5,12 +5,15 @@
 <section id="about">
 	<div>
 		<h1>Desenvolvedor Front-end</h1>
-		<p>
-			Me chamo <b>Matheus Chignolli</b>, gosto de resolver problemas, enfrentar desafios e poder colaborar com o
-			conhecimento que tenho, além de aprender e conhecer muitas coisas que ainda não tive contato. Sempre fui muito
-			ligado a tecnologia e tudo de bom que ela pode oferecer, hoje uso dessa paixão para desenvolver e solucionar
-			problemas reais do mundo com a tecnologia.
-		</p>
+		<div class="text">
+			<img src={profileImage} alt="Foto de perfil" />
+			<p>
+				Me chamo <b>Matheus Chignolli</b>, gosto de resolver problemas, enfrentar desafios e poder colaborar com o
+				conhecimento que tenho, além de aprender e conhecer muitas coisas que ainda não tive contato. Sempre fui muito
+				ligado a tecnologia e tudo de bom que ela pode oferecer, hoje uso dessa paixão para desenvolver e solucionar
+				problemas reais do mundo com a tecnologia.
+			</p>
+		</div>
 		<div class="contacts">
 			<a href="https://github.com/MatheusChignolli" aria-label="Github" target="_blank" rel="noreferrer">
 				<svg
@@ -54,50 +57,32 @@
 			</a>
 		</div>
 	</div>
-	<div class="profile-image">
-		<img src={profileImage} alt="Foto de perfil" />
-	</div>
 </section>
 
 <style>
 	section#about {
-		height: calc(100vh - 43px);
+		width: 100%;
 		display: flex;
 		align-items: center;
 	}
 
 	section#about h1 {
 		width: fit-content;
-		position: relative;
-		margin-bottom: 48px;
+		margin-bottom: 24px;
 	}
 
-	section#about h1::before,
-	section#about h1::after {
-		content: '';
-		z-index: -1;
-		position: absolute;
+	section#about img {
+		max-width: 200px;
+		max-height: 200px;
 		border-radius: 8px;
 	}
 
-	section#about h1::before {
-		left: -5%;
-		width: 50%;
-		height: 300%;
-		bottom: -30%;
-		background-color: var(--color-primary-dark);
+	section#about .text {
+		display: flex;
 	}
 
-	section#about h1::after {
-		left: 40%;
-		width: 70%;
-		bottom: 50%;
-		height: 130%;
-		background-color: var(--color-primary-main);
-	}
-
-	section#about p {
-		max-width: 75%;
+	section#about .text p {
+		margin-left: 24px;
 	}
 
 	section#about .contacts {
@@ -108,15 +93,21 @@
 
 	section#about .contacts a {
 		color: var(--color-primary-text);
-		width: 28px;
-		height: 28px;
+		width: 42px;
+		height: 42px;
 		display: flex;
 		padding: 8px;
+		box-shadow: 0px 1px 3px 0px rgba(153, 153, 153, 1);
 		transition: 0.5s;
 		align-items: center;
 		border-radius: 8px;
 		justify-content: center;
 		background-color: var(--color-primary-main);
+	}
+
+	section#about .contacts a svg {
+		width: 42px;
+		height: 42px;
 	}
 
 	section#about .contacts a:hover {
@@ -125,80 +116,13 @@
 		background-color: var(--color-primary-dark);
 	}
 
-	section#about .profile-image,
-	section#about .profile-image img {
-		position: relative;
-		max-width: 450px;
-		max-height: 450px;
-		border-radius: 8px;
-	}
-
-	section#about .profile-image::before,
-	section#about .profile-image::after {
-		width: 100%;
-		height: 100%;
-		content: '';
-		z-index: -1;
-		position: absolute;
-		border-radius: 8px;
-	}
-
-	section#about .profile-image::before {
-		right: 15%;
-		bottom: 15%;
-		background-color: var(--color-primary-dark);
-	}
-
-	section#about .profile-image::after {
-		top: 15%;
-		left: 15%;
-		background-color: var(--color-primary-main);
-	}
-
-	@media (min-width: 1500px) {
-		section#about .profile-image {
-			margin-right: 80px;
-		}
-	}
-
-	@media (max-width: 1500px) {
-		section#about .profile-image img {
-			width: 300px;
-			height: 300px;
-		}
-	}
-
-	@media (max-width: 1200px) {
-		section#about {
-			height: 100%;
-			margin-bottom: 120px;
-		}
-
-		section#about h1 {
-			margin: 70px 20px 30px 20px;
-		}
-
-		section#about {
+	@media (max-width: 640px) {
+		section#about .text {
 			flex-direction: column;
 		}
 
-		section#about p {
-			max-width: 100%;
-		}
-
-		section#about .profile-image {
-			margin: 20% 0 0 0;
-		}
-	}
-
-	@media (max-width: 640px) {
-		section#about h1 {
-			margin: 40px 20px 30px 20px;
-		}
-
-		section#about .profile-image img {
-			width: 200px;
-			height: 200px;
+		section#about .text p {
+			margin: 24px 0 0 0;
 		}
 	}
 </style>

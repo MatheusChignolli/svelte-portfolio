@@ -10,37 +10,45 @@
 </script>
 
 <header>
-	<h5>Matheus Chignolli</h5>
-	{#if !!links?.length}
-		<nav>
-			<ul>
-				{#each links as { title, url }}
-					<li>
-						{#if url.includes('http')}
-							<a href={url} target="_blank" rel="noreferrer">
-								{title}
-							</a>
-						{:else}
-							<a href={url}>{title}</a>
-						{/if}
-					</li>
-				{/each}
-			</ul>
-		</nav>
-	{/if}
-	<ThemeButton />
+	<div>
+		<h5>Matheus Chignolli</h5>
+		{#if !!links?.length}
+			<nav>
+				<ul>
+					{#each links as { title, url }}
+						<li>
+							{#if url.includes('http')}
+								<a href={url} target="_blank" rel="noreferrer">
+									{title}
+								</a>
+							{:else}
+								<a href={url}>{title}</a>
+							{/if}
+						</li>
+					{/each}
+				</ul>
+			</nav>
+		{/if}
+		<ThemeButton />
+	</div>
 </header>
 
 <style>
 	header {
+		width: 100%;
 		display: flex;
-		padding: 12px 96px;
+		justify-content: center;
+		background-color: var(--color-primary-main);
+	}
+
+	header div {
+		width: 100%;
+		display: flex;
+		padding: 12px 24px;
 		max-width: var(--page-max-width);
 		align-items: center;
-		margin-bottom: 24px;
 		flex-direction: row;
 		justify-content: space-between;
-		background-color: var(--color-primary-main);
 	}
 
 	header h5 {
@@ -58,11 +66,5 @@
 
 	header ul li {
 		font-size: 1rem;
-	}
-
-	@media (max-width: 1200px) {
-		header {
-			padding: 12px 24px;
-		}
 	}
 </style>
