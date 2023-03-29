@@ -94,9 +94,4 @@
 {/if}
 
 <style>
-	hr {
-		margin: 24px 0;
-		width: 100%;
-		border-color: var(--color-primary-text);
-	}
 </style>

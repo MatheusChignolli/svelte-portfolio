@@ -2,10 +2,10 @@
 	import ThemeButton from '../components/ThemeButton.svelte';
 
 	const links: { title: string; url: string }[] = [
-		{
-			title: 'Tecnologias',
-			url: '#technologies'
-		}
+		// {
+		// 	title: 'Tecnologias',
+		// 	url: '#technologies'
+		// }
 	];
 </script>
 
