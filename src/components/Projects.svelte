@@ -8,7 +8,7 @@
 		},
 		{
 			title: 'Rick and Morty characters - Listagem de personagens do desenho Rick and Morty utilizando REST e GraphQl',
-			url: 'https://relatoriocovid19.netlify.app/'
+			url: 'https://rick-and-morty-graphql-rest.netlify.app/'
 		},
 		{
 			title:
