@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { t, locale, locales } from '../i18n';
 	import ThemeButton from '../components/ThemeButton.svelte';
 
 	const links: { title: string; url: string }[] = [
@@ -11,7 +12,12 @@
 
 <header>
 	<div>
-		<h5>Matheus Chignolli</h5>
+		<h5>{$t('myName')}</h5>
+		<select bind:value={$locale}>
+			{#each locales as l}
+				<option value={l}>{l}</option>
+			{/each}
+		</select>
 		{#if !!links?.length}
 			<nav>
 				<ul>
@@ -66,5 +72,16 @@
 
 	header ul li {
 		font-size: 1rem;
+	}
+
+	header select {
+		padding: 8px;
+		margin-left: auto;
+		margin-right: 12px;
+		border-radius: 8px;
+		background-color: var(--color-primary-dark);
+		color: var(--color-primary-text);
+		border: none;
+		height: 32px;
 	}
 </style>

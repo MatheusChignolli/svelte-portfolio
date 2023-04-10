@@ -1,17 +1,15 @@
 <script>
+	import { t } from '../i18n';
 	import profileImage from '$lib/images/profile.png';
 </script>
 
 <section id="about">
 	<div>
-		<h1>Desenvolvedor Front-end</h1>
+		<h1>{@html $t('frontendDeveloper')}</h1>
 		<div class="text">
-			<img src={profileImage} alt="Foto de perfil" />
+			<img src={profileImage} alt={$t('profilePhoto')} />
 			<p>
-				Me chamo <b>Matheus Chignolli</b>, gosto de resolver problemas, enfrentar desafios e poder colaborar com o
-				conhecimento que tenho, além de aprender e conhecer muitas coisas que ainda não tive contato. Sempre fui muito
-				ligado a tecnologia e tudo de bom que ela pode oferecer, hoje uso dessa paixão para desenvolver e solucionar
-				problemas reais do mundo com a tecnologia.
+				{@html $t('aboutMe')}
 			</p>
 		</div>
 		<div class="contacts">

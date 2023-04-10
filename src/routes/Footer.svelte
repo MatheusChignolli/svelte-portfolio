@@ -1,8 +1,10 @@
-<script></script>
+<script>
+	import { t } from '../i18n';
+</script>
 
 <footer>
 	<div>
-		<p>Copyright - {new Date().getFullYear()}</p>
+		<p>{$t('copyright')} - {new Date().getFullYear()}</p>
 		<ul>
 			<li>
 				<a href="https://github.com/MatheusChignolli" aria-label="Github" target="_blank" rel="noreferrer">

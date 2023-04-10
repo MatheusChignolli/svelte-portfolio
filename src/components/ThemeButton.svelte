@@ -5,8 +5,6 @@
 
 	const { theme } = get(preferences);
 
-	console.log('theme:', theme);
-
 	const onDarkMode = () => {
 		window.document.body.classList.toggle('dark-mode');
 

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { t } from '../i18n';
 	import AnchorList from './AnchorList.svelte';
 
 	const items = [
@@ -14,7 +15,7 @@
 </script>
 
 <hr />
-<h2 id="articles">Artigos</h2>
+<h2 id="articles">{@html $t('articles')}</h2>
 <AnchorList {items} />
 
 <style></style>

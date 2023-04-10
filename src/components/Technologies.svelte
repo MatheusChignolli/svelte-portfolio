@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { t } from '../i18n';
+
 	export const technologies: {
 		principal: string;
 		libs?: ({ info: string; list?: string[] } | string)[];
@@ -59,7 +61,7 @@
 
 {#if !!technologies?.length}
 	<hr />
-	<h2 id="technologies">Tecnologias</h2>
+	<h2 id="technologies">{@html $t('technologies')}</h2>
 	<ul class="technologies-list">
 		{#each technologies as { principal, libs }}
 			{#if libs?.length}
