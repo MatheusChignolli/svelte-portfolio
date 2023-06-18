@@ -22,6 +22,10 @@
 		{
 			title: $t('covid19Report'),
 			url: 'https://relatoriocovid19.netlify.app/'
+		},
+		{
+			title: $t('calculatorProject'),
+			url: 'https://calculatooooor.netlify.app/'
 		}
 	]}
 />
