@@ -59,7 +59,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
+		margin-top: 32px;
 		height: calc(100vh - 56px);
 	}
 

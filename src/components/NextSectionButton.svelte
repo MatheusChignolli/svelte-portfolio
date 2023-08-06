@@ -23,7 +23,7 @@
 
 <style>
 	a.next-section {
-		bottom: 12px;
+		bottom: 56px;
 		display: flex;
 		padding: 16px;
 		position: absolute;
