@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { t } from '../i18n';
+	import NextSectionButton from './NextSectionButton.svelte';
 
 	export const technologies: {
 		principal: string;
@@ -61,39 +62,50 @@
 
 {#if !!technologies?.length}
 	<hr />
-	<h2 id="technologies">{@html $t('technologies')}</h2>
-	<ul class="technologies-list">
-		{#each technologies as { principal, libs }}
-			{#if libs?.length}
-				<li>
-					<b>{principal + (libs?.length ? ': ' : '')}</b>
-					{#if libs?.length && typeof libs[0] === 'string'}
-						{#each libs as lib, libIndex}
-							{(libIndex !== 0 ? ', ' : '') + lib}
-						{/each}
-					{:else}
-						<ul>
-							{#each libs as lib}
-								{#if typeof lib !== 'string'}
-									<li>
-										<b>{lib.info + (lib.list?.length ? ': ' : '')}</b>
-										{#if !!lib.list?.length}
-											{#each lib.list as item, itemIndex}
-												{(itemIndex !== 0 ? ', ' : '') + item}
-											{/each}
-										{/if}
-									</li>
-								{/if}
+	<section id="technologies">
+		<h2>{@html $t('technologies')}</h2>
+		<ul class="technologies-list">
+			{#each technologies as { principal, libs }}
+				{#if libs?.length}
+					<li>
+						<b>{principal + (libs?.length ? ': ' : '')}</b>
+						{#if libs?.length && typeof libs[0] === 'string'}
+							{#each libs as lib, libIndex}
+								{(libIndex !== 0 ? ', ' : '') + lib}
 							{/each}
-						</ul>
-					{/if}
-				</li>
-			{:else}
-				<li><b>{principal}</b></li>
-			{/if}
-		{/each}
-	</ul>
+						{:else}
+							<ul>
+								{#each libs as lib}
+									{#if typeof lib !== 'string'}
+										<li>
+											<b>{lib.info + (lib.list?.length ? ': ' : '')}</b>
+											{#if !!lib.list?.length}
+												{#each lib.list as item, itemIndex}
+													{(itemIndex !== 0 ? ', ' : '') + item}
+												{/each}
+											{/if}
+										</li>
+									{/if}
+								{/each}
+							</ul>
+						{/if}
+					</li>
+				{:else}
+					<li><b>{principal}</b></li>
+				{/if}
+			{/each}
+		</ul>
+		<NextSectionButton section="projects" />
+	</section>
 {/if}
 
 <style>
+	section#technologies {
+		padding: 24px 0 0 0;
+		position: relative;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 </style>

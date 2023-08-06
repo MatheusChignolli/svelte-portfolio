@@ -23,7 +23,7 @@
 		height: 100%;
 		margin: 0 auto;
 		display: flex;
-		padding: 24px;
+		padding: 0 24px;
 		max-width: var(--page-max-width);
 		box-sizing: border-box;
 		flex-direction: column;

@@ -15,7 +15,18 @@
 </script>
 
 <hr />
-<h2 id="articles">{@html $t('articles')}</h2>
-<AnchorList {items} />
+<section id="articles">
+	<h2>{@html $t('articles')}</h2>
+	<AnchorList {items} />
+</section>
 
-<style></style>
+<style>
+	section#articles {
+		padding: 24px 0 0 0;
+		position: relative;
+		height: calc(100vh - 56px);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+</style>
